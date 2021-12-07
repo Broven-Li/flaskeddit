@@ -1,0 +1,18 @@
+CACHE MANIFEST
+#9/27/2017, 3:04:25 PM
+#html
+https://github.com/Broven-l/flask_reddit
+#img
+https://assets-cdn.github.com/images/modules/site/universe-octoshop.png
+https://assets-cdn.github.com/images/modules/site/universe-wordmark.png
+#css
+https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css
+https://use.fontawesome.com/releases/v5.8.1/css/all.css
+#js
+https://code.jquery.com/jquery-3.3.1.slim.min.js
+https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js
+NETWORK:
+*
+
+FALLBACK
+https://github.com/ /html/manifest/html/home.html
