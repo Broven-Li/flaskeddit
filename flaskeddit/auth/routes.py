@@ -49,7 +49,7 @@ def login():
     return render_template("login.html", form=form)
 
 
-@auth_blueprint.route("/logout", methods=["POST"])
+@auth_blueprint.route("/logout", methods=["GET", "POST"])
 @login_required
 def logout():
     """
