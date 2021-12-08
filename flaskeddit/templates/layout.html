@@ -89,13 +89,11 @@
                   >
                 </li>
                 <li class="nav-item">
-                  <form action="{{ url_for('auth.logout') }}" method="POST">
-                    <button
-                      class="nav-link btn btn-outline-primary text-primary m-1"
-                    >
-                      Log Out
-                    </button>
-                  </form>
+                  <a
+                    class="nav-link btn btn-outline-primary text-primary m-1"
+                    href="{{ url_for('auth.logout') }}"
+                    >User</a
+                  >
                 </li>
               {% else %}
                 <li class="nav-item">
