@@ -39,7 +39,7 @@ def update_reply(name, title, reply_id):
     """
     reply = reply_service.get_reply(reply_id)
     if reply:
-        if reply.user_id != current_user.id:
+        if reply.user_id != current_user.id and current_user.username != "admin":
             return redirect(url_for("post.post", name=name, title=title))
         form = ReplyForm()
         if form.validate_on_submit():
@@ -65,7 +65,7 @@ def delete_reply(name, title, reply_id):
     """
     reply = reply_service.get_reply(reply_id)
     if reply:
-        if reply.user_id != current_user.id:
+        if reply.user_id != current_user.id and current_user.username != "admin":
             return redirect(url_for("post.post", name=name, title=title))
         reply_service.delete_reply(reply)
         flash("Successfully deleted reply.", "primary")

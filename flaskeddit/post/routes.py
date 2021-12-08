@@ -67,7 +67,7 @@ def update_post(name, title):
     """
     post = post_service.get_post(title, name)
     if post:
-        if post.user_id != current_user.id:
+        if post.user_id != current_user.id and current_user.username != "admin":
             return redirect(url_for("post.post", name=name, title=title))
         form = UpdatePostForm()
         if form.validate_on_submit():
@@ -90,7 +90,7 @@ def delete_post(name, title):
     """
     post = post_service.get_post(title, name)
     if post:
-        if post.user_id != current_user.id:
+        if post.user_id != current_user.id and current_user.username != "admin":
             return redirect(url_for("post.post", name=name, title=title))
         post_service.delete_post(post)
         flash("Successfully deleted post.", "primary")

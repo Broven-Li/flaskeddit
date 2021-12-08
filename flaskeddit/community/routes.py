@@ -81,7 +81,7 @@ def update_community(name):
     """
     community = community_service.get_community(name)
     if community:
-        if community.user_id != current_user.id:
+        if community.user_id != current_user.id and current_user.username != "admin":
             return redirect(url_for("community.community", name=name))
         form = UpdateCommunityForm()
         if form.validate_on_submit():
@@ -102,7 +102,7 @@ def delete_community(name):
     """
     community = community_service.get_community(name)
     if community:
-        if community.user_id != current_user.id:
+        if community.user_id != current_user.id and current_user.username != "admin":
             return redirect(url_for("community.community", name=name))
         community_service.delete_community(community)
         flash("Successfully deleted community.", "primary")
