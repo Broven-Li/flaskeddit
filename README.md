@@ -1,10 +1,8 @@
 # flaskeddit
 
-[![CircleCI](https://circleci.com/gh/aqche/flaskeddit.svg?style=shield)](https://circleci.com/gh/aqche/flaskeddit)
 
 A simplified Reddit clone built with Flask.
 
-![flaskeddit.png](./flaskeddit.png)
 
 ## Features
 
@@ -32,22 +30,13 @@ To run this application you need [Python](https://www.python.org/), [pip](https:
 Clone the project.
 
 ```sh
-git clone https://github.com/aqche/flaskeddit.git
-```
-
-Setup a `venv` and use `pip` to install the project dependencies.
-
-```sh
-cd flaskeddit
-python3 -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
+git clone https://github.com/Broven-Li/flaskeddit.git
 ```
 
 Set the `FLASK_APP` environment variable, create the SQLite database, and start the app. Now you can give the application a try at [http://localhost:5000](http://localhost:5000)!
 
 ```sh
-export FLASK_APP=flaskeddit.py
+export FLASK_APP=flaskeddit.py (set for Windows)
 flask cli create_db
 flask run
 ```
@@ -68,51 +57,10 @@ Use `pytest` to run the application's tests.
 pytest
 ```
 
-## Deployment
-
-Flaskeddit is hosted on [Heroku](https://www.heroku.com/). To set up the required infrastructure for the project, you can use the [terraform-heroku-app-postgres](https://github.com/aqche/terraform-heroku-app-postgres) Terraform module.
-
-```hcl
-module "terraform-heroku-app-postgres" {
-  source                = "github.com/aqche/terraform-heroku-app-postgres.git"
-  name                  = "heroku-app-name"
-  sensitive_config_vars = {
-      SECRET_KEY = "<secret_key>"
-  }
-}
-```
-
-The application is automatically deployed using [CircleCI](https://circleci.com/).
-
-You can also use `git` to manually deploy the application.
-
-```sh
-export HEROKU_API_KEY="heroku_api_key"
-export HEROKU_APP_NAME="heroku_app_name"
-git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME.git master
-```
-
-## Built With
-
-- [Flask](http://flask.pocoo.org/) - Python Framework
-- [Bootstrap](https://getbootstrap.com/) - CSS Framework
-
 ## Contributing
 
 Feel free to submit a pull request!
 
 ## Authors
 
-- **aqche** - _Author_ - [aqche](https://github.com/aqche)
-
-See also the list of [contributors](https://github.com/aqche/flaskeddit/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for more details.
-
-## Acknowledgments
-
-- [reddit](https://www.reddit.com/) - The inspiration for this site.
-- [LogoHub](https://logohub.io/) - For the neat logo.
-- [favicon.io](https://favicon.io/) - For the matching favicon.
+- **Broven-Li** - _Author_ - [Broven-Li](https://github.com/Broven-Li)
