@@ -2,6 +2,10 @@ CACHE MANIFEST
 #9/27/2017, 3:04:25 PM
 #html
 https://github.com/Broven-l/flask_reddit
+/flaskeddit/templates/layout.html
+/flaskeddit/templates/community.html
+/flaskeddit/templates/feed.html
+/flaskeddit/templates/login.html
 #img
 https://assets-cdn.github.com/images/modules/site/universe-octoshop.png
 https://assets-cdn.github.com/images/modules/site/universe-wordmark.png
